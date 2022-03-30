@@ -1,7 +1,3 @@
-// ChannelBroker
-// Write arbitrary objects to multiple channels, recieving channels
-// can be added and removed dynamicaly.
-
 package broker
 
 import (
