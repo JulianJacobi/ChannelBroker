@@ -1,5 +1,5 @@
 [![Go version](https://img.shields.io/github/go-mod/go-version/JulianJacobi/ChannelBroker.svg)](https://github.com/JulianJacobi/ChannelBroker)
-[![GoDoc reference](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/julianjacobi/channelbroker)
+[![GoDoc reference](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/JulianJacobi/ChannelBroker)
 
 # Channel Broker
 
