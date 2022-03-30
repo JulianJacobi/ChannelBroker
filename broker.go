@@ -89,8 +89,8 @@ func (cb *ChannelBroker[T]) NewChannel() *Channel[T] {
 
 // RemoveChannel from broker and closes the containing channel.
 //
-// Cahnnel object should not be further used after removing it from broker,
-// because the unlaying channel ist closed after this call.
+// Channel object should not be further used after removing it from broker,
+// because the unlaying channel is closed after this call.
 func (cb *ChannelBroker[T]) RemoveChannel(c *Channel[T]) {
     cb.removeChannel(c)
 }
