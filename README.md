@@ -1,3 +1,4 @@
+![tests](https://github.com/JulianJacobi/ChannelBroker/actions/workflows/test.yml/badge.svg)
 [![Go version](https://img.shields.io/github/go-mod/go-version/JulianJacobi/ChannelBroker.svg)](https://github.com/JulianJacobi/ChannelBroker)
 [![GoDoc reference](https://img.shields.io/badge/godoc-reference-blue.svg)](https://godoc.org/github.com/JulianJacobi/ChannelBroker)
 
