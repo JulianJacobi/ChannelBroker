@@ -58,8 +58,8 @@ func (cb *ChannelBroker[T]) removeChannel(c *Channel[T]) {
     _, exists := cb.chans[c.uuid]
     if exists {
         delete(cb.chans, c.uuid)
+        close(c.channel)
     }
-    close(c.channel)
 }
 
 // distribute object to all channels in broker's channel map
@@ -89,4 +89,14 @@ func (cb *ChannelBroker[T]) NewChannel() *Channel[T] {
 // because the unlaying channel is closed after this call.
 func (cb *ChannelBroker[T]) RemoveChannel(c *Channel[T]) {
     cb.removeChannel(c)
+}
+
+// Clear closes and removes all channels from broker
+func (cb *ChannelBroker[T]) Clear() {
+    cb.lock.Lock()
+    defer cb.lock.Unlock()
+    for _, ch := range cb.chans {
+        close(ch)
+    }
+    cb.chans = make(map[uuid.UUID]chan T)
 }

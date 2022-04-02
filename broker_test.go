@@ -37,4 +37,10 @@ func TestChannelBroker(t *testing.T) {
     expectChan(c1.Chan, "Test#2", "c1")
     expectChan(c2.Chan, "", "c2")
     expectChan(c3.Chan, "Test#2", "c3")
+
+    broker.Clear()
+
+    if len(broker.chans) != 0 {
+        t.Fatalf("Broker channels not 0 after Clear: %d", len(broker.chans))
+    }
 }
